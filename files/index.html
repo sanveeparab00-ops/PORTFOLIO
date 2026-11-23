@@ -1383,6 +1383,210 @@ input:focus, select:focus, textarea:focus {
   min-width: 0;
 }
 .dp h3 { font-size: 15px; margin-bottom: 10px; }
+
+/* Live Case Walkthrough Styles */
+.case-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.case-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.case-tab-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--m);
+  transition: all 0.25s ease;
+}
+.case-tab-btn.active {
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.25), rgba(25, 211, 238, 0.2));
+  border-color: var(--c);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(124, 92, 255, 0.3);
+}
+.case-card {
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--b);
+  position: relative;
+  overflow: hidden;
+}
+.case-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.case-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(25, 211, 238, 0.15);
+  color: var(--c2);
+  border: 1px solid rgba(25, 211, 238, 0.3);
+}
+.case-pain {
+  font-size: 13px;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+}
+@media (max-width: 800px) {
+  .case-grid { grid-template-columns: 1fr; }
+}
+.case-input-box {
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.case-input-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.case-input-item span:first-child { color: var(--m); }
+.case-input-item span:last-child { font-weight: 600; color: var(--t); text-align: right; max-width: 65%; }
+
+.case-trigger-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--c), var(--c2));
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 25px rgba(124, 92, 255, 0.4);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+.case-trigger-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(25, 211, 238, 0.6);
+}
+
+.case-steps-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.c-step {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+.c-step.running {
+  background: rgba(124, 92, 255, 0.12);
+  border-color: var(--c);
+  box-shadow: 0 0 15px rgba(124, 92, 255, 0.25);
+}
+.c-step.done {
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+.c-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.c-step.done .c-step-num {
+  background: #34d399;
+  color: #03040c;
+}
+.c-step-body b {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 3px;
+}
+.c-step-body p {
+  font-size: 12px;
+  color: var(--m);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.case-result-card {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(25, 211, 238, 0.1));
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  animation: scale-up 0.4s ease;
+}
+.case-result-card h4 {
+  font-size: 15px;
+  color: #34d399;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.case-result-card p {
+  font-size: 12px;
+  color: var(--t);
+  margin: 0;
+}
+.case-result-badge {
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: #34d399;
+  color: #03040c;
+  font-weight: 700;
+  font-size: 12px;
+}
+
 .dr {
   display: flex;
   align-items: center;
@@ -2778,8 +2982,171 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
   const saved = () => { let t = 0; M.forEach((m, i) => m.r.forEach((r, j) => st[i][j] && (t += r[2]))); return t; };
   const fm = t => Math.floor(t / 60) + "h " + String(t % 60).padStart(2, "0") + "m";
 
+  
+  /* Complete Case Walkthrough Data - 1 Signature Case Per Department */
+  const CASES = [
+    {
+      title: "Zero-Proxy Kiosk Punch & Automated Geofence Audit",
+      badge: "Smart HRMS · Kiosk & GPS Audit",
+      pain: "Manual buddy-punching & proxy attendance causing unverified payroll leakage in hospitals.",
+      input_title: "Biometric Hardware Kiosk #04 · Lotus Hospital",
+      inputs: [
+        ["Staff Member", "Pooja Patil · Staff Nurse (NUR-4029)"],
+        ["Hospital Geofence", "19.0760° N, 72.8777° E (Inside 50m radius)"],
+        ["Biometric Scan", "On-Premise Kiosk Dual-Camera Vector"],
+        ["Scheduled Shift", "Day Shift: 08:00 - 16:00 · ICU Ward"]
+      ],
+      steps: [
+        ["Biometric Facial Vector Match", "Hardware camera matches 128 facial nodes against enrolled staff biometric profile. Match confidence: 99.4%."],
+        ["Hospital GPS Geofence Verification", "GPS telemetry verified within Lotus Hospital 50m geofence perimeter. Proxy spoofing check: 100% PASSED."],
+        ["Shift & ICU Ward Roster Allocation", "Day shift automatically assigned. Ward nurse-to-patient staffing ratio validated in real time."],
+        ["Automated Salary Ledger Calculation", "Duty logged (+8.0 hrs), zero late penalty applied, automated salary ledger credit registered."]
+      ],
+      result_title: "Zero-Proxy Punch Verified & Duty Registered",
+      result_stat: "100% Audit Verified · 0 Proxy Risk",
+      result_desc: "Pooja Patil's punch authenticated via on-premise hardware kiosk and geofence. Automated salary ledger updated without manual HR chasing."
+    },
+    {
+      title: "PMJAY Daily Dump Ingestion & TMC Reconciliation",
+      badge: "MIS Engine · 14,850 Rows Ingested",
+      pain: "4+ hours spent daily on VLOOKUPs and manual Excel copy-pasting across hospital feeds.",
+      input_title: "PMJAY Daily Dump Feed · Tata Memorial & 18 Centers",
+      inputs: [
+        ["Uploaded File", "TMC_PMJAY_Daily_Dump_Raw.xlsx (14,850 rows)"],
+        ["Hospital Feeds", "18 Empanelled Healthcare Feeds"],
+        ["Reconciliation Run", "NTR, Acceptance & TMC Batches"],
+        ["Reporting Deadline", "Executive Submission before 09:30 AM"]
+      ],
+      steps: [
+        ["Schema Normalization & Column Mapping", "Auto-maps inconsistent column headers, cleans date formats, and normalizes patient UIDs across all 18 hospital feeds in 600ms."],
+        ["NTR & Acceptance Processing", "Reconciles 4,210 patient claims against central state health registry with zero data loss in 1.4s."],
+        ["TMC Discrepancy & Variance Scan", "Cross-checks admission registry with billing dumps to detect package code mismatches and billing discrepancies."],
+        ["Automated Executive CSV Generation", "Compiles executive MIS report, isolates 14 discrepancy rows, and dispatches automated CSV to department heads."]
+      ],
+      result_title: "14,850 Rows Reconciled in 2.4 Seconds",
+      result_stat: "4,196 Matched · 14 Discrepancies Isolated",
+      result_desc: "TMC reconciliation completed. Clean MIS CSV generated and auto-emailed to management. 4+ hours of manual work eliminated."
+    },
+    {
+      title: "Hospital Billing Audit & Tariff Mismatch Detection",
+      badge: "Data Analysis · Tariff Leakage Detection",
+      pain: "Hospitals overcharging itemized bills above agreed TPA package rates, causing silent financial leakage.",
+      input_title: "Hospital Inpatient Billing File · City Care Hospital",
+      inputs: [
+        ["Claim Number", "CLM-CC-88319 · Laparoscopic Surgery"],
+        ["Hospital Billed Amount", "₹3,45,000 (Itemized Bill Submitted)"],
+        ["Agreed TPA Tariff", "₹3,30,000 (Empanelled Ceiling Rate)"],
+        ["Patient & Stay", "Sunil Deshmukh · 6 Days Inpatient"]
+      ],
+      steps: [
+        ["Line-Item OCR & Charge Parsing", "Extracts individual charges: Surgeon fee, OT charges, Nursing care, and ICU Bed Rent from billing PDF."],
+        ["Empanelled Rate Matrix Comparison", "Cross-checks every line-item rate against empanelled hospital tariff schedule stored in DPex database."],
+        ["Tariff Overcharge Caught", "ICU Bed Rent billed @ ₹8,500/day vs agreed rate of ₹6,000/day. Exact overcharge isolated: ₹15,000 over 6 days."],
+        ["Automated Correction & Query Draft", "Bill adjusted to agreed ₹3,30,000. Automated query note with highlighted clause dispatched to hospital billing head."]
+      ],
+      result_title: "₹15,000 Tariff Overcharge Intercepted & Corrected",
+      result_stat: "Corrected to ₹3,30,000 · 0 Leakage",
+      result_desc: "Tariff rate mismatch caught before settlement. Itemized correction letter auto-dispatched to hospital billing desk."
+    },
+    {
+      title: "Emergency Pre-Auth (PA) Submission & TAT Watchdog",
+      badge: "Operations · TAT Watchdog & PA Clearance",
+      pain: "Emergency admissions delayed by slow manual checks, risking patient health and incurring 4-hour SLA breach penalties.",
+      input_title: "Emergency Admission Dossier · Sunrise Hospital",
+      inputs: [
+        ["Case Reference", "PA-SUN-88124 · Acute Coronary Syndrome"],
+        ["Patient Details", "Ramesh Gupta (Age 54, Male)"],
+        ["Clinical Desk", "Sunrise Medical Cardiac Center"],
+        ["SLA TAT Countdown", "4-Hour SLA · 42 minutes remaining before breach!"]
+      ],
+      steps: [
+        ["Clinical Document Completeness Scan", "Validates presence of 4 mandatory clinical proofs: ECG strip, Troponin-I lab, Doctor's note & ID proof in 800ms."],
+        ["Clinical Rule Engine Verification", "Cross-checks emergency diagnosis code against TPA package guidelines to confirm eligibility for instant pre-auth."],
+        ["Automated Priority Clearance", "Priority clearance token generated, notifying senior desk reviewer and hospital coordinator."],
+        ["Encrypted TPA Portal Submission", "Encrypted claim packet submitted via automated TPA API bridge; pre-auth approved in 14 minutes."]
+      ],
+      result_title: "Pre-Auth Cleared in 14 Minutes",
+      result_stat: "Approved · Zero SLA Delay Penalty",
+      result_desc: "Emergency Pre-Authorization approved 28 minutes before the TAT breach threshold. Hospital admission cleared immediately."
+    },
+    {
+      title: "AI UTR Bank Statement vs PMJAY Hospital Dump Reconciliation",
+      badge: "Accounts · 24-Second AI UTR Reconciliation",
+      pain: "Reconciling hundreds of UTR bank credits against patient claim dump files takes 2-3 hours of manual eye-straining work.",
+      input_title: "HDFC Bank Statement & PMJAY Hospital Claim Dump",
+      inputs: [
+        ["Bank Statement", "HDFC_Bank_Stmt_Nov.pdf (248 UTR transactions)"],
+        ["Hospital Dump", "PMJAY_Hospital_Claims_Dump.xlsx (248 records)"],
+        ["Total Settlement Value", "₹42,84,200 (Government scheme payment credits)"],
+        ["Manual Benchmark", "2 to 3 hours of manual reconciliation"]
+      ],
+      steps: [
+        ["AI Bank Statement Format Adaptation", "Machine learning layout model identifies UTR codes, credit amounts, and dates across non-standard bank PDF layouts in 1.2s."],
+        ["Algorithmic Matching Engine", "Cross-references UTR transaction numbers with patient claim registration IDs in hospital dump."],
+        ["Amount Variance & Discrepancy Isolation", "Identifies 246 perfect matches (₹42.8L) and isolates 2 short-payment variances totaling ₹4,200 on Case #7712."],
+        ["Finance Master Ledger Sync", "Marks 246 bills as 'Settled', archives proforma/tax bills, and auto-queues follow-up reminder email for ₹4,200 variance."]
+      ],
+      result_title: "248 Records Reconciled in 24 Seconds",
+      result_stat: "246 Matched (₹42.8L) · 2 Variances Isolated",
+      result_desc: "2 to 3 hours of manual reconciliation reduced to under 30 seconds. Targeted follow-up email queued for variance recovery."
+    },
+    {
+      title: "Hospital Empanelment Scoring & Automated MOU Drafting",
+      badge: "Business Dev · Automated MOU Generator",
+      pain: "Drafting commercial hospital partnership agreements takes days of back-and-forth manual legal formatting.",
+      input_title: "Hospital Partner Application · Apex Healthcare Network",
+      inputs: [
+        ["Hospital Applicant", "Apex Healthcare Network (400 Beds, Multispeciality)"],
+        ["Accreditation", "NABH & NABL Certified · Tier-1 Metro"],
+        ["TPA Empanelments", "Star, Care, Medi Assist, PMJAY"],
+        ["Commercial Target", "₹1.4 Cr Projected Annual Claims"]
+      ],
+      steps: [
+        ["Empanelment Scoring Algorithm", "Evaluates bed count, surgical infrastructure, and TPA volume. Score: 94/100 (Tier-1 Enterprise Partner)."],
+        ["Commercial SLA Clause Mapping", "Selects standard package discount terms, 15-day claim settlement SLA, and audit protocols in 900ms."],
+        ["Automated Legal MOU Compilation", "Generates complete 14-page custom commercial agreement with digital verification clauses in 2.1 seconds."],
+        ["Digital E-Signature Dispatch", "MOU envelope dispatched to Hospital Medical Director and DPex CEO for instant electronic signing."]
+      ],
+      result_title: "14-Page Legal MOU Generated & Dispatched in 2.1s",
+      result_stat: "94/100 Empanelment Score · ₹1.4 Cr Pipeline",
+      result_desc: "Commercial contract compiled from legal template and queued for electronic signature without manual drafting."
+    }
+  ];
+
+  let caseActiveStep = [-1, -1, -1, -1, -1, -1];
+  let caseRunning = false;
+  let demoViewMode = 'case'; // 'case' or 'queue'
+
+  window.setDemoView = (mode) => {
+    demoViewMode = mode;
+    render();
+    playSound('click');
+  };
+
+  window.runCaseSimulation = async (idx) => {
+    if (caseRunning) return;
+    caseRunning = true;
+    const c = CASES[idx];
+    cap("Running live automation case: " + c.title, 4000);
+    playSound('click');
+    for (let s = 0; s < c.steps.length; s++) {
+      caseActiveStep[idx] = s;
+      render();
+      playSound('chime');
+      await W(1000);
+    }
+    caseActiveStep[idx] = c.steps.length; // all done
+    caseRunning = false;
+    fd[idx].unshift("⚡ CASE COMPLETED: " + c.result_title);
+    render();
+    playSound('fanfare');
+    cap("✓ " + c.result_title + " (" + c.result_stat + ")");
+  };
+
+
   function render() {
     const m = M[cur];
+    const c = CASES[cur];
     const side = D.getElementById("dside");
     if (side) {
       side.innerHTML = M.map((x, i) => `<button class="di ${i === cur ? "on" : ""} ${pend(i) ? "" : "dn"}" style="--k:${x.c}" onclick="dSel(${i})"><span>${x.i}</span>${x.n}<em>${pend(i) || "✓"}</em></button>`).join("");
@@ -2787,6 +3154,98 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
     const mx = Math.max(...m.ch), bars = m.ch.map((v, i) => `<rect x="${14 + i * 46}" y="${120 - v / mx * 104}" width="30" height="${v / mx * 104}" rx="7" fill="${m.c}" opacity="${0.45 + i * 0.08}"/>`).join("");
     const main = D.getElementById("dmain");
     if (main) {
+      const stepIdx = caseActiveStep[cur];
+      const isDone = stepIdx >= c.steps.length;
+
+      let caseContent = `
+        <div class="case-view">
+          <div class="case-tabs">
+            <button class="case-tab-btn ${demoViewMode === 'case' ? 'active' : ''}" onclick="setDemoView('case')">⚡ Live Case Simulation: How It Works</button>
+            <button class="case-tab-btn ${demoViewMode === 'queue' ? 'active' : ''}" onclick="setDemoView('queue')">📋 Operational Queue &amp; Batch Engine</button>
+          </div>
+
+          ${demoViewMode === 'case' ? `
+            <div class="case-card" style="border-top: 3px solid ${m.c}">
+              <div class="case-badge-row">
+                <span class="case-pill">${c.badge}</span>
+                <span style="font-size:12px;color:var(--m)">Case #${cur + 1}01 · Real Operational Flow</span>
+              </div>
+              <h3 style="font-size: 19px; margin: 0 0 8px 0; font-family: 'Sora', sans-serif;">${c.title}</h3>
+              <div class="case-pain">
+                <span>⚠️</span>
+                <span><strong>The Manual Problem:</strong> ${c.pain}</span>
+              </div>
+
+              <div class="case-grid">
+                <!-- Left: Raw Input & Trigger -->
+                <div class="case-input-box">
+                  <div style="font-size:12px;font-weight:700;color:var(--c2);letter-spacing:0.5px;text-transform:uppercase;">
+                    📂 Input / Raw Operational Data
+                  </div>
+                  <small style="color:var(--m);font-weight:600;">${c.input_title}</small>
+                  ${c.inputs.map(inp => `<div class="case-input-item"><span>${inp[0]}</span><span>${inp[1]}</span></div>`).join("")}
+                  
+                  <button class="case-trigger-btn" onclick="runCaseSimulation(${cur})" ${caseRunning ? 'disabled style="opacity:0.6"' : ''}>
+                    ${caseRunning ? '⚡ Executing Automation Pipeline…' : (isDone ? '🔄 Replay Automation Case' : '▶ Run Automation (Show How We Use It)')}
+                  </button>
+                </div>
+
+                <!-- Right: Step-by-Step Live Execution -->
+                <div class="case-steps-box">
+                  <div style="font-size:12px;font-weight:700;color:var(--m);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px;">
+                    ⚙️ Live Execution Pipeline
+                  </div>
+                  ${c.steps.map((st, s) => {
+                    const statusClass = stepIdx === s ? 'running' : (stepIdx > s ? 'done' : '');
+                    const icon = stepIdx > s ? '✓' : (s + 1);
+                    return `
+                      <div class="c-step ${statusClass}">
+                        <div class="c-step-num">${icon}</div>
+                        <div class="c-step-body">
+                          <b>${st[0]}</b>
+                          <p>${st[1]}</p>
+                        </div>
+                      </div>
+                    `;
+                  }).join("")}
+                </div>
+              </div>
+
+              <!-- Output Result Card -->
+              ${isDone ? `
+                <div class="case-result-card">
+                  <div>
+                    <h4><span>✓</span> ${c.result_title}</h4>
+                    <p>${c.result_desc}</p>
+                  </div>
+                  <div class="case-result-badge">${c.result_stat}</div>
+                </div>
+              ` : ''}
+            </div>
+          ` : `
+            <!-- Operational Queue Mode -->
+            <div class="dg">
+              <div class="dp" style="--k:${m.c}">
+                <h3>Work queue &amp; Active Cases</h3>
+                ${m.r.map((r, j) => `<div class="dr ${st[cur][j] ? "ok" : ""}">
+                  <div style="min-width:0">
+                    <b>${r[0]}</b>
+                    <span style="display:block;font-size:12px;color:var(--m);margin-top:2px">${r[1]}</span>
+                  </div>
+                  <em>${st[cur][j] ? "✓ Automated" : `Pending <button class="rb" onclick="dRun(${cur},${j})">Run</button>`}</em>
+                </div>`).join("")}
+              </div>
+              <div class="dp">
+                <h3>${m.ct}</h3>
+                <svg viewBox="0 0 330 130" width="100%">${bars}</svg>
+                <h3 style="margin-top:12px">Real-Time Event Feed</h3>
+                <div class="ft">${fd[cur].slice(0, 4).map(x => `<div><span style="color:var(--c-green);font-weight:bold">✓</span> ${x}</div>`).join("") || '<div style="color:var(--m)">Click "Run" or "⚡ Automate all" to simulate live pipeline…</div>'}</div>
+              </div>
+            </div>
+          `}
+        </div>
+      `;
+
       main.innerHTML = `<div class="dh" style="--k:${m.c}">
         <div>
           <h2>${m.i} ${m.n}</h2>
@@ -2797,28 +3256,12 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
         </div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
           <span class="mt">⏱ Time saved <b>${fm(saved())}</b></span>
-          <button class="btn" onclick="dAll(${cur})">⚡ Automate all</button>
+          <button class="btn" onclick="dAll(${cur})">⚡ Automate queue</button>
         </div>
       </div>
       <div class="dk">${m.kp.map((k, i) => `<div><small>${k[0]}</small><b>${k[1] === "#" ? pend(cur) : k[1]}</b></div>`).join("")}</div>
-      <div class="dg">
-        <div class="dp" style="--k:${m.c}">
-          <h3>Work queue &amp; Active Cases</h3>
-          ${m.r.map((r, j) => `<div class="dr ${st[cur][j] ? "ok" : ""}">
-            <div style="min-width:0">
-              <b>${r[0]}</b>
-              <span style="display:block;font-size:12px;color:var(--m);margin-top:2px">${r[1]}</span>
-            </div>
-            <em>${st[cur][j] ? "✓ Automated" : `Pending <button class="rb" onclick="dRun(${cur},${j})">Run</button>`}</em>
-          </div>`).join("")}
-        </div>
-        <div class="dp">
-          <h3>${m.ct}</h3>
-          <svg viewBox="0 0 330 130" width="100%">${bars}</svg>
-          <h3 style="margin-top:12px">Real-Time Event Feed</h3>
-          <div class="ft">${fd[cur].slice(0, 4).map(x => `<div><span style="color:var(--c-green);font-weight:bold">✓</span> ${x}</div>`).join("") || '<div style="color:var(--m)">Click "Run" or "⚡ Automate all" to simulate live pipeline…</div>'}</div>
-        </div>
-      </div>`;
+      ${caseContent}
+      `;
     }
   }
 
@@ -2918,12 +3361,16 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
     const my = ++tk;
     for (let i = 0; i < M.length && tour && my === tk; i++) {
       cur = i;
+      demoViewMode = 'case';
       render();
       cap(M[i].cap, 3600);
-      await W(1200);
+      await W(1000);
+      if (!tour || my !== tk) return;
+      await runCaseSimulation(i);
+      await W(1500);
       if (!tour || my !== tk) return;
       await dAll(i);
-      await W(1800);
+      await W(1000);
     }
     if (tour) {
       tour = 0;
