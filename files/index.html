@@ -2510,12 +2510,12 @@ setInterval(tick, 2000);
 
 /* Department Data & Interactive Workspaces */
 const DP = [
-  ["HR", "👥", "#34d399", "People operations on autopilot", "Attendance, leave, payroll and onboarding records handled without chasing.", ["Attendance & leave auto-approvals", "Automated salary slips & bank transfers", "Digital employee records & onboarding kits"], [["Leave: Aarav Mehta"], ["Leave: Sneha Iyer"], ["Payslips: Monthly cycle"], ["Onboarding: 4 new engineers"]]],
-  ["Operations", "⚙️", "#f59e0b", "Zero hospital cases slipping through", "Track admissions, coordinate teams, and protect every insurance TAT.", ["Pre-auth claim status monitoring", "TAT alert escalation 3 hrs early", "Hospital network SLA coordination"], [["PA-88121 follow-up"], ["CL-55102 document check"], ["PA-88124 TAT breach alert"], ["CL-55107 status sync"]]],
-  ["MIS", "📊", "#a78bfa", "Reports that build themselves", "Daily MIS reports, validated dumps and reconciliations delivered on time.", ["Daily MIS & data-dump validation", "NTR, Acceptance & TMC auto-matching", "One-click automated CSV exports"], [["Daily MIS executive report"], ["Hospital dump validation"], ["NTR & Acceptance batch"], ["TMC reconciliation match"]]],
-  ["Data Analysis", "🔎", "#2dd4bf", "Catch every billing mismatch early", "Cross-verify hospital bills and catch discrepancies before settlement.", ["Line-item claim vs bill verification", "Discrepancy and overcharge detection", "Hospital-wise audit analytics"], [["BL-7701 Lotus Hospital"], ["BL-7702 City Care"], ["BL-7703 Sunrise Medical"], ["BL-7704 Apex Heart"]]],
-  ["Accounts", "💰", "#38bdf8", "Books that close without month-end rush", "Invoices, receivables and automated bank reconciliation.", ["Automated invoices & overdue reminders", "Bank statement auto-reconciliation", "GST-ready transactional drafts"], [["INV-2208 Orbit Tech"], ["INV-2209 Nimbus Retail"], ["Bank statement match"], ["GST monthly return draft"]]],
-  ["Business Development", "🚀", "#f472b6", "A pipeline that never goes cold", "Capture, score and follow up on enterprise opportunities automatically.", ["Intelligent lead scoring & routing", "Instant proposal generation", "Pipeline conversion insights"], [["Lead: Helix Pharma"], ["Lead: UrbanCart"], ["Proposal: Astra Steel"], ["Follow-up: Bluewave"]]]
+  ["HR · Smart HRMS & ERP", "👥", "#34d399", "Zero-Proxy Kiosk & Geofenced Attendance", "Enterprise workforce management platform featuring dedicated on-premise hardware kiosk with facial verification and hospital GPS geofencing to eliminate buddy-punching, with automated salary ledger calculations.", ["Zero-proxy hardware kiosk with biometric facial photo verification", "Hospital-specific GPS geofencing & multi-tiered shift allocations", "Self-service half-day leave workflows & automated salary ledger calculation"], [["Kiosk Punch Sync: 482 Staff"], ["Half-day Leave: Pooja Patil"], ["Shift Allocation: 32 Nurses"], ["Salary Ledger: ₹48.2L / mo"]]],
+  ["MIS Department", "📊", "#a78bfa", "Daily Dumps, NTR & TMC Reconciliation Engine", "Automates preparation and maintenance of daily MIS reports, daily data dump processing & validation, NTR and Acceptance data processing, TMC reconciliation reports, and automated CSV exports.", ["Processing & validating daily hospital data dumps across feeds", "Handling NTR and Acceptance data processing with 0 errors", "TMC reconciliation report preparation, discrepancy analysis & auto CSVs"], [["Daily MIS Report: 14,850 rows"], ["NTR & Acceptance: 4,210 cases"], ["TMC Reconciliation: TMC-084"], ["Executive Daily CSV Generator"]]],
+  ["Data Analysis", "🔎", "#2dd4bf", "Hospital Billing Audits & Tariff Discrepancy Scans", "Cross-verifies hospital billing data with claim approvals, maintains daily billing records, detects billing discrepancies and tariff rate mismatches, and compiles comprehensive hospital-wise billing dashboards.", ["Hospital billing verification & validation across 94 empanelled portals", "Analyzing billing discrepancies and identifying tariff rate mismatches", "Compiling hospital-wise billing reports and tracking pending cases"], [["Billing Verification: Lotus Hospital"], ["Tariff Discrepancy: City Care"], ["Hospital-wise Report: 94 Portals"], ["High-Value Surgery Audit: 18 claims"]]],
+  ["Operations Department", "⚙️", "#f59e0b", "Pre-Auth Approvals & Zero-TAT-Breach Watchdog", "End-to-end operational workflow monitoring, coordinating with hospital desks, verifying patient and claim-related diagnostic documents, monitoring Pre-Authorizations (PA), and enforcing strict TAT limits.", ["Monitoring Pre-Authorization (PA) and claim processing activities", "Strict TAT (Turnaround Time) monitoring with automated early escalations", "Processing & verifying diagnostic papers, discharge summaries & bills"], [["Pre-Auth Clearance: Sunrise Hospital"], ["TAT Alert Escalation: 12 claims"], ["Document Verification: Discharge batch"], ["Hospital Coordination: Apex Heart"]]],
+  ["Accounts & Finance", "💰", "#38bdf8", "Finance Master, PMJAY Claim-Paid & UTR Engine", "Centralizes invoicing & receivables in Finance Master, reduces monthly PMJAY claim-paid processing from 2+ hours to under 2 minutes, and automates bank statement UTR reconciliation in under 30 seconds.", ["Finance Master: Invoicing repository, balance tracking & auto reminder emails", "Claim Paid Automation: PMJAY monthly dump to 3 report formats in < 2 mins", "AI UTR Reconciliation: Bank statement vs hospital dump matching in < 30 secs"], [["Finance Master: Automated Reminders"], ["PMJAY Claim-Paid: 18 hospital sheets"], ["Automated Email Dispatch: All verified"], ["AI UTR Match: 248 bank entries"]]],
+  ["Business Development", "🚀", "#f472b6", "Hospital Empanelment & Healthcare Expansion", "Empanelling hospital networks, automated commercial proposal & MOU generation, partner lead scoring, SLA contract lifecycle management, and healthcare network expansion analytics.", ["Hospital empanelment dossiers & custom commercial proposals", "MOU lifecycle tracking with automated legal review reminders", "Hospital partner lead scoring by bed count & TPA volume routing"], [["Empanelment Dossier: Apex Healthcare"], ["MOU Follow-up: Fortis Care Group"], ["Lead Scoring: 14 partner inquiries"], ["Expansion Dashboard: Q4 Pipeline"]]]
 ];
 
 const tabsContainer = document.getElementById("tabs");
@@ -2669,12 +2669,108 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
 (()=>{
   const D = document, W = ms => new Promise(r => setTimeout(r, ms));
   const M = [
-    { n: "HR", i: "👥", c: "#34d399", t: "Leave, payroll & onboarding on autopilot", kp: [["Headcount", "248"], ["Present today", "94%"], ["Pending tasks", "#"], ["Payroll due", "₹42.6L"]], ch: [92, 95, 91, 96, 94, 97, 94], ct: "Attendance % (7 days)", cap: "HR: leaves, payslips and onboarding handled without a single follow-up.", r: [["Aarav Mehta", "Casual leave · 2 days", 18, "Leave approved, balance updated"], ["Sneha Iyer", "Sick leave · 1 day", 12, "Leave approved, manager notified"], ["Payroll cycle", "248 payslips", 45, "Payslips generated and emailed"], ["New joiners", "4 onboarding kits", 30, "Onboarding checklists sent"]] },
-    { n: "Operations", i: "⚙️", c: "#f59e0b", t: "Every case tracked, every TAT protected", kp: [["Pending cases", "#"], ["Avg TAT", "18.4 hrs"], ["TAT breaches", "3"], ["PA approved today", "142"]], ch: [58, 64, 61, 72, 69, 78, 83], ct: "Cases closed within TAT", cap: "Operations: pre-auths and claims followed up before any TAT breach.", r: [["PA-88121", "Lotus Hospital · follow-up", 20, "Hospital reminded, case status updated"], ["CL-55102", "City Care · document check", 25, "Documents verified as complete"], ["PA-88124", "Sunrise Medical · TAT breach", 35, "Escalated to senior reviewer"], ["CL-55107", "Apex Heart · status sync", 15, "Status synced across teams"]] },
-    { n: "MIS", i: "📊", c: "#a78bfa", t: "Reports that build and submit themselves", kp: [["Reports pending", "#"], ["Dump validation", "99.2%"], ["Discrepancies", "14"], ["On-time submission", "100%"]], ch: [60, 64, 63, 70, 74, 72, 80], ct: "Data accuracy index", cap: "MIS: dumps validated and reports generated before you finish your tea.", r: [["Daily MIS report", "4,820 rows", 40, "Daily MIS generated as CSV"], ["Data dump validation", "12,406 rows", 55, "Dump validated, 0 errors"], ["NTR & Acceptance", "4,144 records", 45, "NTR and Acceptance processed"], ["TMC reconciliation", "3,087 records", 60, "TMC reconciled, 14 flagged"]] },
-    { n: "Data Analysis", i: "🔎", c: "#2dd4bf", t: "Catch every billing mismatch early", kp: [["Bills to verify", "#"], ["Mismatch rate", "2.3%"], ["Hospitals covered", "86"], ["Claims checked", "₹3.4Cr"]], ch: [34, 41, 39, 48, 52, 50, 57], ct: "Bills verified", cap: "Data Analysis: hospital bills verified against claims automatically.", r: [["BL-7701", "Lotus Hospital · ₹1.24L", 20, "Bill matches claim"], ["BL-7702", "City Care · ₹86,400", 15, "Bill matches claim"], ["BL-7703", "Sunrise Medical · ₹2.9L", 30, "Mismatch flagged for review"], ["BL-7704", "Apex Heart · ₹5.1L", 35, "Hospital-wise report updated"]] },
-    { n: "Accounts", i: "💰", c: "#38bdf8", t: "Books that close themselves", kp: [["Receivables", "₹1.84Cr"], ["Payables", "₹62.1L"], ["Unpaid invoices", "#"], ["GST filing", "On track"]], ch: [30, 45, 38, 52, 61, 55, 68], ct: "Collections (₹L)", cap: "Accounts: reconciliation, reminders and GST drafts without the month-end rush.", r: [["INV-2208", "Orbit Tech · ₹4.2L", 15, "Payment reminder sent"], ["INV-2209", "Nimbus Retail · ₹1.1L", 15, "Invoice marked paid"], ["Bank statement", "248 entries", 50, "Bank entries auto-matched"], ["GST return", "Monthly draft", 60, "GST draft prepared"]] },
-    { n: "Business Dev", i: "🚀", c: "#f472b6", t: "A pipeline that never goes cold", kp: [["Active leads", "#"], ["Win rate", "34%"], ["Pipeline", "₹5.2Cr"], ["Meetings today", "6"]], ch: [20, 26, 24, 31, 29, 35, 38], ct: "New leads", cap: "Business Development: leads scored, followed up and proposals drafted.", r: [["Helix Pharma", "₹80L lead", 20, "Lead scored and follow-up sent"], ["UrbanCart", "₹35L lead", 15, "Follow-up email sent"], ["Astra Steel", "Proposal · ₹1.2Cr", 45, "Proposal drafted from template"], ["Bluewave", "₹22L lead", 15, "Meeting scheduled"]] }
+    {
+      n: "Smart HRMS & ERP",
+      i: "👥",
+      c: "#34d399",
+      t: "Zero-Proxy Kiosk Face-ID, Geofenced Attendance & Automated Payroll",
+      b: ["Zero-Proxy Kiosk", "Hospital GPS Geofencing", "Self-Service Leave", "Salary Ledger Automation"],
+      kp: [["Kiosk Status", "Live · 0 Proxy"], ["Staff Punches", "482 Verified"], ["Pending Requests", "#"], ["Salary Ledger", "₹48.2L Automated"]],
+      ch: [92, 95, 94, 98, 96, 99, 97],
+      ct: "Kiosk Attendance Accuracy %",
+      cap: "Smart HRMS: Dedicated hardware kiosk with facial verification & GPS eliminates proxy attendance; salary ledger calculates automatically.",
+      r: [
+        ["Hardware Kiosk Face-ID Sync", "On-premise biometric kiosk · Hospital-specific GPS geofence", 20, "482 Kiosk punches verified via face-ID & geofence; 0 buddy-punching."],
+        ["Self-Service Leave Workflow", "Pooja Patil · Staff Nurse · Half-day leave application", 15, "Half-day leave approved, manager notified & ward roster re-balanced."],
+        ["Multi-Tier Shift Allocation", "32 Nursing staff · ICU & Emergency rotational roster", 25, "Rotational night shifts allocated with automated coverage validation."],
+        ["Automated Salary Ledger", "482 Employee records, attendance logs & statutory deductions", 45, "Salary ledger computed, payslips generated & dispatched to email."]
+      ]
+    },
+    {
+      n: "MIS Department",
+      i: "📊",
+      c: "#a78bfa",
+      t: "Daily Dumps, NTR/Acceptance & TMC Reconciliation Engine",
+      b: ["Daily Dumps", "NTR & Acceptance", "TMC Reconciliations", "Auto CSV Reports"],
+      kp: [["Daily Dump Health", "99.8% Valid"], ["NTR & Acceptance", "4,210 Cases"], ["Pending Files", "#"], ["TMC Reconciled", "14 Resolved"]],
+      ch: [65, 72, 70, 78, 82, 80, 89],
+      ct: "Data Dump Accuracy Index",
+      cap: "MIS: Daily hospital dumps validated, NTR & Acceptance batches processed, and TMC reconciliations completed in seconds.",
+      r: [
+        ["Daily Data Dump Processing", "14,850 rows across 18 hospital feeds validated", 40, "Daily dump schema mapped, normalized and verified with 0 schema errors."],
+        ["NTR & Acceptance Processing", "4,210 patient claims reconciled and verified", 45, "NTR & Acceptance data verified, accuracy checked, discrepancy report generated."],
+        ["TMC Reconciliation Report", "Tata Memorial Hospital claims & records cross-audit", 50, "TMC Reconciliation report prepared: 14 discrepancies isolated & resolved."],
+        ["Automated MIS CSV Generator", "Consolidated executive daily operational records", 35, "Automated CSV reports compiled & submitted to leadership on time."]
+      ]
+    },
+    {
+      n: "Data Analysis Department",
+      i: "🔎",
+      c: "#2dd4bf",
+      t: "Hospital Billing Data Verification & Discrepancy Auditing",
+      b: ["Billing Validation", "Discrepancy Audits", "Hospital-wise Reports", "Claim Verification"],
+      kp: [["Billing Audited", "₹4.82 Cr"], ["Mismatch Rate", "0.4% Detected"], ["Pending Audits", "#"], ["Hospitals Covered", "94 Portals"]],
+      ch: [38, 44, 42, 52, 56, 54, 62],
+      ct: "Hospital Billing Audits Completed",
+      cap: "Data Analysis: Hospital billing data cross-verified with claim records; tariffs and overcharges detected before submission.",
+      r: [
+        ["Hospital Billing Verification", "Lotus Multispeciality · 48 inpatient billing records", 25, "Hospital billing data verified against TPA approvals with 0 leakage."],
+        ["Billing Discrepancy & Mismatch Scan", "City Care Hospital · ₹3.4L tariff variance detected", 30, "Billing discrepancy analyzed: mismatch flagged and tariff corrected."],
+        ["Hospital-wise Billing Report", "94 empanelled hospitals consolidated into single analytics feed", 40, "Hospital-wise billing report compiled with claim totals & pending metrics."],
+        ["Claim Amount & Record Audit", "18 high-value surgery claims (>₹2.5L each)", 25, "Claim amounts & itemized charges verified against hospital records."]
+      ]
+    },
+    {
+      n: "Operations Department",
+      i: "⚙️",
+      c: "#f59e0b",
+      t: "Workflow Monitoring, PA Approvals & TAT Enforcement",
+      b: ["Workflow Monitoring", "PA Clearance", "TAT Enforcement", "Case Resolution"],
+      kp: [["Active Cases", "186 Live"], ["Avg TAT", "14.2 Mins"], ["Pending Cases", "#"], ["PA Clearance Rate", "98.6%"]],
+      ch: [62, 68, 65, 76, 73, 82, 88],
+      ct: "Cases Closed Within SLA/TAT",
+      cap: "Operations: Real-time Pre-Authorization monitoring, claim document verification, and strict TAT enforcement.",
+      r: [
+        ["Pre-Authorization (PA) Processing", "Sunrise Hospital · Emergency admission pre-auth clearance", 20, "PA documents verified and instant pre-auth clearance submitted."],
+        ["Turnaround Time (TAT) Watchdog", "12 pending hospital claims nearing 4-hour TAT limit", 25, "Automated alert triggered; TAT delay prevented across 12 files."],
+        ["Patient & Claim Document Check", "Diagnostic reports, discharge summaries & identity papers", 30, "Patient documentation verified complete; query escalation avoided."],
+        ["Hospital Team Coordination", "Apex Heart Institute · Medical query resolution", 20, "Coordinated with clinical desk; case status updated across portals."]
+      ]
+    },
+    {
+      n: "Accounts & Finance Automation",
+      i: "💰",
+      c: "#38bdf8",
+      t: "Finance Master, PMJAY Claim-Paid & AI UTR Reconciliation",
+      b: ["Finance Master", "PMJAY Claim-Paid (2h → 2m)", "AI UTR Reconciliation (24s)", "Auto Reminders"],
+      kp: [["Receivables", "₹2.18 Cr"], ["Claim-Paid Speed", "1.8 Mins"], ["Pending Invoices", "#"], ["UTR Match Rate", "99.4% (24s)"]],
+      ch: [35, 48, 42, 56, 65, 59, 72],
+      ct: "Reconciliation & Collections (₹L)",
+      cap: "Accounts: Finance Master archives bills & sends auto-reminders, Claim-Paid runs in 2 minutes, and AI matches UTR bank statements in 24 seconds.",
+      r: [
+        ["Finance Master · Invoice Repository", "Proforma & tax invoices · Outstanding balance tracking", 25, "Bills generated & archived; automated payment reminders emailed for unpaid dues."],
+        ["Claim Paid Automation", "PMJAY monthly dump processing across 3 report formats", 45, "Reduced 2+ hrs to 1.8 mins: Hospital-wise claim-paid Excel sheets generated."],
+        ["Automated Claim Email Dispatch", "Hospital dispatch notifications batch mailing", 30, "Condensed full day of manual mailing to 1.5 mins: All verified sheets emailed."],
+        ["AI UTR Bank Reconciliation", "Bank statement vs hospital dump reconciliation algorithm", 50, "Reduced 2-3 hrs to 24s: Matched, unmatched & amount variances isolated."]
+      ]
+    },
+    {
+      n: "Business Development",
+      i: "🚀",
+      c: "#f472b6",
+      t: "Hospital Empanelment, MOUs & Healthcare Network Expansion",
+      b: ["Hospital Empanelment", "MOU Automation", "Lead Scoring", "Pipeline Analytics"],
+      kp: [["Empanelled Hospitals", "94 Active"], ["Pipeline Value", "₹6.8 Cr"], ["Pending Contracts", "#"], ["MOU Win Rate", "38%"]],
+      ch: [22, 28, 26, 34, 32, 38, 42],
+      ct: "Empanelment Pipeline Growth",
+      cap: "Business Development: Hospital empanelment proposals drafted, MOUs followed up, and expansion pipeline scored automatically.",
+      r: [
+        ["Hospital Empanelment Dossier", "Apex Healthcare Network · 400-bed corporate hospital", 25, "Empanelment package & customized commercial proposal compiled."],
+        ["MOU Lifecycle Follow-Up", "Fortis Care Group · Commercial SLA & legal review", 20, "Automated email reminder dispatched; agreement stage moved to signing."],
+        ["Lead Scoring & Route Matrix", "14 incoming hospital partner inquiries", 15, "Leads scored by bed strength & TPA volume; tasks assigned to regional heads."],
+        ["Network Expansion Analytics", "Western Region Healthcare Dashboard", 30, "Empanelment targets, conversion velocity, and hospital ROI visualized."]
+      ]
+    }
   ];
 
   let cur = 0, st = M.map(m => m.r.map(() => 0)), fd = M.map(() => []), tour = 0, fin = 0;
@@ -2692,7 +2788,13 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
     const main = D.getElementById("dmain");
     if (main) {
       main.innerHTML = `<div class="dh" style="--k:${m.c}">
-        <div><h2>${m.i} ${m.n}</h2><small>${m.t}</small></div>
+        <div>
+          <h2>${m.i} ${m.n}</h2>
+          <small style="display:block;margin-top:4px;color:var(--m);font-size:13px">${m.t}</small>
+          <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+            ${(m.b || []).map(b => `<span style="font-size:11px;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--m)">${b}</span>`).join("")}
+          </div>
+        </div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
           <span class="mt">⏱ Time saved <b>${fm(saved())}</b></span>
           <button class="btn" onclick="dAll(${cur})">⚡ Automate all</button>
@@ -2701,14 +2803,20 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
       <div class="dk">${m.kp.map((k, i) => `<div><small>${k[0]}</small><b>${k[1] === "#" ? pend(cur) : k[1]}</b></div>`).join("")}</div>
       <div class="dg">
         <div class="dp" style="--k:${m.c}">
-          <h3>Work queue</h3>
-          ${m.r.map((r, j) => `<div class="dr ${st[cur][j] ? "ok" : ""}"><b>${r[0]}</b><span>${r[1]}</span><em>${st[cur][j] ? "Automated ✓" : `Pending <button class="rb" onclick="dRun(${cur},${j})">Run</button>`}</em></div>`).join("")}
+          <h3>Work queue &amp; Active Cases</h3>
+          ${m.r.map((r, j) => `<div class="dr ${st[cur][j] ? "ok" : ""}">
+            <div style="min-width:0">
+              <b>${r[0]}</b>
+              <span style="display:block;font-size:12px;color:var(--m);margin-top:2px">${r[1]}</span>
+            </div>
+            <em>${st[cur][j] ? "✓ Automated" : `Pending <button class="rb" onclick="dRun(${cur},${j})">Run</button>`}</em>
+          </div>`).join("")}
         </div>
         <div class="dp">
           <h3>${m.ct}</h3>
           <svg viewBox="0 0 330 130" width="100%">${bars}</svg>
-          <h3 style="margin-top:10px">Automation log</h3>
-          <div class="ft">${fd[cur].slice(0, 4).map(x => `<div>${x}</div>`).join("") || '<div style="color:var(--m)">Click "Automate all" to begin…</div>'}</div>
+          <h3 style="margin-top:12px">Real-Time Event Feed</h3>
+          <div class="ft">${fd[cur].slice(0, 4).map(x => `<div><span style="color:var(--c-green);font-weight:bold">✓</span> ${x}</div>`).join("") || '<div style="color:var(--m)">Click "Run" or "⚡ Automate all" to simulate live pipeline…</div>'}</div>
         </div>
       </div>`;
     }
@@ -2733,14 +2841,14 @@ window.DPEX_CFG = { API: "", EMAIL: "durveshparab1111@gmail.com", WHATSAPP: "919
     const t = saved(), d = D.createElement("div");
     d.className = "dfin";
     d.innerHTML = `<div>
-      <span class="pill">All 6 Departments Automated</span>
+      <span class="pill">All 6 Enterprise Workspaces Automated</span>
       <div class="big">${fm(t)}</div>
-      <h2>saved in under 60 seconds.</h2>
-      <p style="color: var(--m); max-width: 540px; margin: 0 auto 24px;">
-        That is just a single day of manual enterprise effort across six teams. Imagine that speed every single day for your whole organization.
+      <h2>manual effort eliminated in under 60 seconds.</h2>
+      <p style="color: var(--m); max-width: 580px; margin: 0 auto 24px; line-height: 1.6;">
+        From <strong>zero-proxy kiosk attendance</strong> and <strong>daily hospital dump validation</strong> to <strong>2-minute PMJAY claim-paid processing</strong> and <strong>24-second AI UTR reconciliations</strong>—DPex unifies your entire organization with zero friction.
       </p>
-      <div class="row" style="justify-content:center">
-        <a class="btn" href="#demo" onclick="closeDemo()">Book my live demo →</a>
+      <div class="row" style="justify-content:center; gap: 12px;">
+        <a class="btn" href="#demo" onclick="closeDemo()">Book a personalized live demo →</a>
         <button class="btn g" onclick="dReset()">Replay Tour</button>
       </div>
     </div>`;
