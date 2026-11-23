@@ -1770,6 +1770,230 @@ footer .wrap {
   .win { transform: none; }
   form { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Optimizations (DPex)
+   ========================================================================== */
+
+/* Prevent horizontal overflow across all mobile viewports */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Touch-friendly Tap Targets & Safe Areas */
+button, a, input, select {
+  touch-action: manipulation;
+}
+
+/* Tablets and small laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .wrap { padding: 0 20px; }
+  .fo { gap: 36px; }
+  .roi { padding: 32px 24px; gap: 28px; }
+  .api-box { padding: 24px 20px; }
+}
+
+/* Mobile & Small Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .wrap { padding: 0 16px; }
+  section { padding: 48px 0; }
+  .hd { margin: 0 auto 32px; }
+  .hd h2 { font-size: clamp(24px, 6vw, 36px); letter-spacing: -0.8px; }
+
+  /* Navbar Responsive */
+  nav { height: 64px; }
+  .brand { font-size: 21px; gap: 8px; }
+  .logo-img { width: 34px; height: 34px; border-radius: 10px; }
+  .na { gap: 8px; }
+  .nd2 { padding: 7px 12px; font-size: 12px; border-radius: 10px; }
+
+  /* Hero Headline */
+  h1 {
+    font-size: clamp(30px, 8.5vw, 48px);
+    letter-spacing: -1.4px;
+    line-height: 1.15;
+    margin: 16px auto;
+  }
+  .hero { padding: 48px 0 32px; }
+  .hero p { font-size: 15px; line-height: 1.55; }
+  .hero .row { flex-direction: column; width: 100%; max-width: 320px; margin: 20px auto 0; gap: 10px; }
+  .hero .row .btn { width: 100%; justify-content: center; }
+
+  /* Swipeable Department Carousel */
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 6px 16px 14px;
+    margin: 0 -16px 18px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: none;
+    white-space: nowrap;
+    font-size: 12.5px;
+    padding: 8px 14px;
+    border-radius: 100px;
+  }
+
+  /* Fullscreen Native Experience for Live Demo Modal */
+  .da { padding: 0 !important; }
+  .dw {
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+  .dtop {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  .dtop .pill { display: none; }
+  .dtop .brand { font-size: 17px !important; }
+  .dtop .brand .logo-img { width: 26px !important; height: 26px !important; }
+  .dtop .btn { padding: 6px 10px; font-size: 11.5px; }
+  .dtop .cl { width: 30px; height: 30px; font-size: 14px; }
+  .dcap { font-size: 12px; padding: 7px 12px; }
+
+  /* Department tabs inside demo modal */
+  #dside {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--b);
+    overflow-x: auto;
+    padding: 8px 12px;
+    gap: 6px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  #dside::-webkit-scrollbar { display: none; }
+  .di {
+    flex: none;
+    white-space: nowrap;
+    font-size: 11.5px;
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+
+  /* Main Demo Content on Mobile */
+  #dmain {
+    padding: 14px 12px 28px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .dh {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .dh h2 { font-size: 19px; }
+  .dh small { font-size: 12px; }
+  .mt { font-size: 11px; }
+
+  .dk {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .dk div { padding: 10px 12px; border-radius: 12px; }
+  .dk small { font-size: 10.5px; }
+  .dk b { font-size: 17px; }
+
+  /* Case Walkthrough Card on Mobile */
+  .case-card { padding: 14px 12px; border-radius: 14px; }
+  .case-tabs {
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .case-tabs::-webkit-scrollbar { display: none; }
+  .case-tab-btn { font-size: 11.5px; padding: 6px 12px; white-space: nowrap; flex: none; }
+  .case-pain { font-size: 11.5px; padding: 7px 10px; }
+  .case-grid { grid-template-columns: 1fr; gap: 12px; }
+  .case-input-box { padding: 12px; }
+  .case-input-item { font-size: 11.5px; }
+  .case-trigger-btn { padding: 11px; font-size: 13px; min-height: 44px; }
+  .c-step { padding: 10px 12px; gap: 10px; }
+  .c-step-body b { font-size: 12.5px; }
+  .c-step-body p { font-size: 11px; }
+  .case-result-card {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .case-result-card h4 { font-size: 13.5px; }
+  .case-result-card p { font-size: 11px; }
+
+  /* Founder Card Responsive */
+  .fo { grid-template-columns: 1fr; gap: 28px; }
+  .ph {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 22px;
+    animation: none; /* Smooth touch scrolling without float jitter */
+  }
+  .ph img { border-radius: 16px; }
+
+  /* Team Grid */
+  .tm { grid-template-columns: 1fr; gap: 16px; }
+  .tc { padding: 18px 14px; }
+
+  /* ROI and Tech Matrix */
+  .roi { grid-template-columns: 1fr; padding: 24px 16px; gap: 20px; }
+  .tech-matrix { grid-template-columns: 1fr; gap: 14px; }
+  .tech-card { padding: 20px 16px; }
+  .api-box { grid-template-columns: 1fr; padding: 18px 14px; gap: 14px; }
+  pre { padding: 14px; font-size: 11.5px; min-height: auto; word-break: break-word; }
+
+  /* Form & Floating Button */
+  .cta { padding: 40px 16px; }
+  form { grid-template-columns: 1fr; gap: 10px; }
+  input, select, textarea { font-size: 15px !important; } /* Prevents iOS auto-zoom */
+  .fc {
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    padding: 9px 15px;
+    font-size: 12.5px;
+  }
+}
+
+/* Small Smartphone Screens (<= 480px) */
+@media (max-width: 480px) {
+  /* In top nav: hide 'Book a demo' button so Brand + Live Demo + Menu fit cleanly */
+  .na .nb { display: none; }
+  .brand { font-size: 19px; }
+  .logo-img { width: 30px; height: 30px; }
+  .nd2 { padding: 6px 10px; font-size: 11.5px; }
+  .ib { width: 34px; height: 34px; }
+
+  /* Big stat numbers */
+  .big { font-size: clamp(40px, 11vw, 56px); }
+
+  /* Case input layout */
+  .case-input-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .case-input-item span:last-child {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
 </style>
 </head>
 <body>
